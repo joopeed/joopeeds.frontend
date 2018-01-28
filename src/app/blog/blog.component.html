@@ -4,9 +4,10 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-heading text-right">
-                  <h1>my posts on  <img src="https://cdn-images-1.medium.com/max/400/1*uLuWzCXfq2rt1t_TkuLB8A.png" style="max-width: 100px"></h1>
-     
+          
+        <div class="post-heading">
+          <div class="text-left float-left"><img src="assets/back.png" routerLink="/"></div>
+          <h1 class="text-right">my posts on  <img src="https://cdn-images-1.medium.com/max/400/1*uLuWzCXfq2rt1t_TkuLB8A.png" style="max-width: 100px"></h1>
         </div>
         
       </div>
@@ -19,7 +20,10 @@
   <div class="row">
     <div class="col-lg-7 col-md-10 mx-auto">
       <div>
-          <div *ngFor="let post of posts; index as i" class="card mb-3" [routerLink]="['/post', post.id]">
+          <div *ngIf="loading" class="center">
+            <img src="assets/loading.svg">
+          </div>
+          <div *ngFor="let post of posts; index as i" class="card mb-3 clickable" [routerLink]="['/updates', post.id]">
               <div class="card-header">
                   <h5 class="card-title">{{post.title}}</h5>
               </div>

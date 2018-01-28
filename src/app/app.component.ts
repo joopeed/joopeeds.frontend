@@ -25,7 +25,7 @@ import {
         }),
 
         // animation and styles at end of transition
-        animate('0.1s', style({ opacity: 1,
+        animate('0.4s', style({ opacity: 1,
           transform: "translateX(0)"
         }))
       ])
@@ -39,7 +39,7 @@ export class AppComponent {
 
   // change the animation state
   getRouteAnimation(outlet) {
-    return outlet.activatedRouteData.animation
+    return outlet.activatedRouteData.animation;
   }
 
   ngOnInit(): void {

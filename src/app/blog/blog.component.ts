@@ -10,17 +10,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogComponent implements OnInit {
 
-   posts:any = [];
+   posts: any = [];
+   loading: boolean = true;
+   loadUpdates: any;
 
    // Inject HttpClient into your component or service.
    constructor(private http: HttpClient) {}
 
 
    ngOnInit() {
+
             // Make the HTTP request:
-          this.http.get('https://joopeedsblog.appspot.com/api/medium_posts').subscribe(data => {
+          this.loadUpdates = this.http.get('https://joopeedsblog.appspot.com/api/medium_posts').subscribe(data => {
             // Read the result field from the JSON response.
             this.posts = data;
+            this.loading = false;
           }, error => {
             this.posts = '< <i class="fa fa-exclamation-circle"/></i>  =( >' + JSON.stringify(error);
           });

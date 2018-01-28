@@ -13,8 +13,8 @@ import { PostComponent } from './post/post.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'post/:id', component: PostComponent }
+  { path: 'updates', component: BlogComponent },
+  { path: 'updates/:id', component: PostComponent }
 ];
 
 @NgModule({
