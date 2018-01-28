@@ -1,14 +1,11 @@
-.masthead {
-    background-color: #202a2f;
-}
-h1 {
-    display: inline;
-    float: left;
-
-}
 .text-desc {
     font-size:  14px;
     display: inline;
     position: relative;  
     top: 70px;
 }
+
+a.music:link { color:rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
+a.music:visited { color: rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
+a.music:hover { color: rgb(40, 192, 53); text-decoration:none; font-weight:normal; }
+a.music:active { color: rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
