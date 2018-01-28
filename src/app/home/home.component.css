@@ -1,0 +1,14 @@
+.masthead {
+    background-color: #202a2f;
+}
+h1 {
+    display: inline;
+    float: left;
+
+}
+.text-desc {
+    font-size:  14px;
+    display: inline;
+    position: relative;  
+    top: 70px;
+}
