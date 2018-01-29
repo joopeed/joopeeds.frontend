@@ -1,21 +1,42 @@
 <!-- Page Header -->
-<header class="masthead">
-  <div class="overlay"></div>
+<header class="masthead" [ngClass]="{'color1': block1selected, 'color2': block2selected, 'color3': block3selected, 'color4': block4selected }">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-7 col-md-10 mx-auto clearfix">
         <div class="post-heading">
-          <span class="text-desc">Also known as joopeeds</span>
-          <h2 class="subheading">Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.</h2> 
-          
-          <h3>I'm mostly a Full Stack Developer</h3>
-          <h5>when not, I enjoy listening to music, watching series and reading.</h5>
-          Btw, I've recently listened to <span [innerHTML]="lastmusic"></span>
-          <h3>I am based in Auckland, NZ</h3>
-          <br><br><br>
-          <hr>
-          <h3>To get in touch, write to joopeeds@gmail.com</h3>
-          <h3>Please, download my updated CV </h3>
+          <div class="floating-box color1" 
+          [ngClass]="{'larger': block1selected }"
+          (mouseenter) ="mouseEnter('block1')" (mouseleave) ="mouseLeave('block1')">
+              <h2 class="subheading">
+                <img src="assets/waving-hand.png" 
+                [ngClass]="{'shake': shake, 'hand':!shake}"> 
+                Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.</h2> 
+              <p class="text-desc">Also known as joopeeds</p>
+          </div>
+          <div class="floating-box color2 bold" 
+          [ngClass]="{'larger': block2selected }"
+          (mouseenter) ="mouseEnter('block2')" (mouseleave) ="mouseLeave('block2')">
+              <p class="clearfix">I graduated from The Federal University of Campina Grande 
+                  with a Bachelor's degree in Computer Science </p>
+              <p>I am Full Stack Developer who is always trying to balance the visual weight</p>
+              <p>I am based in Auckland, NZ <img src="assets/location.png" 
+                [ngClass]="{'shake': location, 'location':!location}"> </p>
+          </div>
+          <div class="floating-box color3" 
+          [ngClass]="{'larger': block3selected }"
+          (mouseenter) ="mouseEnter('block3')" (mouseleave) ="mouseLeave('block3')">
+              <p>On a usual day, my joys are listening to good music, watching series and reading.</p>  
+              <p>Btw, I've recently listened to <span [innerHTML]="lastmusic"></span><span class="small"> - {{ when | amTimeAgo}}</span></p>
+              <p [innerHTML]="onrepeat"></p>
+          </div>
+          <div class="floating-box color4" 
+          [ngClass]="{'larger': block4selected }"
+          (mouseenter) ="mouseEnter('block4')" (mouseleave) ="mouseLeave('block4')">
+            <p>See my full resume and work history 
+              <a class="resume" target="_blank" href="http://www.linkedin.com/in/joopeed/">on Linkedin</a> or 
+              <a class="resume" target="_blank" href="http://www.joopeeds.com/resume.pdf">download it</a></p>
+            <p>To get in touch, write to <a class="resume" href="mailto:joopeeds@gmail.com">joopeeds@gmail.com</a></p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 body {
   font-size: 20px;
-  color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif;
+  color: #b3c6da;
+  font-family: 'Raleway', 'Lora', 'Times New Roman', serif;
 }
 
 p {

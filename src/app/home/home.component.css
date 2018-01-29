@@ -1,11 +1,105 @@
 .text-desc {
-    font-size:  14px;
-    display: inline;
-    position: relative;  
-    top: 70px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    float: right;
+    font-size:  12px;
+    position: relative;
+    top:  -30px;
+    right: 25px;
 }
 
-a.music:link { color:rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
+
+img.hand {
+    width: 30px;
+    transition: all 0.1s ease-in-out 0s; 
+}
+img.shake {
+    width: 30px;
+    cursor: default;
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out 0s; 
+}
+
+img.location {
+    width: 30px;
+    transition: all 0.1s ease-in-out 0s; 
+}
+
+p {
+    clear: both;
+    font-family: 'Raleway', sans-serif;
+}
+
+.floating-box {
+    float: left;
+    padding: 20px;
+    width:  500px;
+    background: black;  
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.179);
+}
+
+.color2 {
+    background-color: #83E85A !important; 
+    transition: all 1.3s ease-in-out 0s; 
+}
+
+.bold{
+    color: black;
+    font-weight: bold; 
+}
+
+.color1 {
+    transition: all 1.3s ease-in-out 0s; 
+    background-color: #00C3FF !important;
+}
+
+.color3 {
+    transition: all 1.3s ease-in-out 0s; 
+    background-color: rgb(235, 181, 32) !important;
+    
+}
+
+.color4 {
+    transition: all 1.3s ease-in-out 0s; 
+    background-color: rgb(199, 1, 67) !important;
+}
+
+.larger {
+    transition: all 0.2s ease-in-out 0s; 
+    transform: scale(1.1);
+}
+
+a.music:link { 
+    transition: all 1.3s ease-in-out 0s; 
+    color:rgb(50, 161, 59); text-decoration:none; font-weight:normal; 
+}
 a.music:visited { color: rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
-a.music:hover { color: rgb(40, 192, 53); text-decoration:none; font-weight:normal; }
+a.music:hover { 
+    transition: all 1.3s ease-in-out 0s; 
+    color: rgb(0, 248, 21); text-decoration:none; font-weight:normal; 
+}
 a.music:active { color: rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
+
+
+a.onrepeat:link { 
+    transition: all 1.3s ease-in-out 0s; 
+    color:rgb(194, 32, 59); text-decoration:none; font-weight:normal; 
+}
+a.onrepeat:visited { color: rgb(194, 32, 59); text-decoration:none; font-weight:normal; }
+a.onrepeat:hover { 
+    transition: all 1.3s ease-in-out 0s; 
+    color: rgb(255, 6, 6); text-decoration:none; font-weight:normal; 
+}
+a.onrepeat:active { color: rgb(194, 32, 59); text-decoration:none; font-weight:normal; }
+
+
+a.resume:link { 
+    transition: all 0.3s ease-in-out 0s; 
+    color:rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; 
+}
+a.resume:visited { color: rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; }
+a.resume:hover { 
+    transition: all 0.3s ease-in-out 0s; 
+    color: rgb(59, 83, 81) !important; text-decoration:none; font-weight:normal; 
+}
+a.resume:active { color: rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; }

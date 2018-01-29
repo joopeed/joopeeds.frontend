@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule   } from '@angular/common/http'
+import { MomentModule } from 'angular2-moment';
 import {APP_BASE_HREF} from '@angular/common';
 
 
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MomentModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
