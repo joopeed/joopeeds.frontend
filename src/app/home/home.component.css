@@ -32,6 +32,7 @@ p {
 .floating-box {
     float: left;
     padding: 20px;
+    margin-left: 30px;
     background: black;  
     margin-bottom: 20px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.179);
@@ -63,6 +64,11 @@ p {
     background-color: rgb(199, 1, 67) !important;
 }
 
+.color5 {
+    transition: all 1.3s ease-in-out 0s; 
+    background-color: rgb(103, 1, 199) !important;
+}
+
 .larger {
     transition: all 0.2s ease-in-out 0s; 
     transform: scale(1.1);
@@ -91,14 +97,36 @@ a.onrepeat:hover {
 }
 a.onrepeat:active { color: rgb(194, 32, 59); text-decoration:none; font-weight:normal; }
 
+a.series:link { 
+    transition: all 1.3s ease-in-out 0s; 
+    color:rgb(160, 99, 9); text-decoration:none; font-weight:normal; 
+}
+a.series:visited { color: rgb(160, 99, 9); text-decoration:none; font-weight:normal; }
+a.series:hover { 
+    transition: all 1.3s ease-in-out 0s; 
+    color: rgb(204, 128, 14); text-decoration:none; font-weight:normal; 
+}
+a.series:active { color: rgb(160, 99, 9); text-decoration:none; font-weight:normal; }
+
+a.games:link { 
+    transition: all 1.3s ease-in-out 0s; 
+    color:rgb(119, 4, 33); text-decoration:none; font-weight:normal; 
+}
+a.games:visited { color: rgb(119, 4, 33); text-decoration:none; font-weight:normal; }
+a.games:hover { 
+    transition: all 1.3s ease-in-out 0s; 
+    color: rgb(212, 78, 112); text-decoration:none; font-weight:normal; 
+}
+a.games:active { color: rgb(119, 4, 33); text-decoration:none; font-weight:normal; }
+
 
 a.resume:link { 
     transition: all 0.3s ease-in-out 0s; 
-    color:rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; 
+    color:rgb(34, 14, 82); text-decoration:none; font-weight:normal; 
 }
-a.resume:visited { color: rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; }
+a.resume:visited { color: rgb(34, 14, 82); text-decoration:none; font-weight:normal; }
 a.resume:hover { 
     transition: all 0.3s ease-in-out 0s; 
-    color: rgb(59, 83, 81) !important; text-decoration:none; font-weight:normal; 
+    color: rgb(164, 122, 199); text-decoration:none; font-weight:normal; 
 }
-a.resume:active { color: rgb(255, 254, 254) !important; text-decoration:none; font-weight:normal; }
+a.resume:active { color: rgb(34, 14, 82); text-decoration:none; font-weight:normal; }

@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
 
   lastmusic: string = '<  <i class="fa fa-spinner fa-spin"/></i> loading >';
   onrepeat: string = '<  <i class="fa fa-spinner fa-spin"></i> loading  >'
+  series: string = '<a class="series" target="_blank" href="http://www.amc.com/shows/breaking-bad"><i class="fa fa-television"></i> Breaking Bad</a> is probably my favourite TV series of all-time. It should be yours as well <br> ' +
+  'Along with <a class="series" target="_blank" href="https://www.netflix.com/title/70178217"><i class="fa fa-television"></i> House of Cards</a> which is completely messed up.'
   when
   shake = false;
   location = false;
@@ -19,6 +21,7 @@ export class HomeComponent implements OnInit {
   block2selected = false; 
   block3selected = false; 
   block4selected = false;
+  block5selected = false;
 
   constructor(private http: HttpClient) {}
 
@@ -56,6 +59,8 @@ export class HomeComponent implements OnInit {
       this.block3selected = true;
     } else if(div == 'block4'){
       this.block4selected = true;
+    } else if(div == 'block5'){
+      this.block5selected = true;
     }
   }
 
@@ -70,6 +75,8 @@ export class HomeComponent implements OnInit {
       this.block3selected = false;
     } else if(div == 'block4'){
       this.block4selected = false;
+    } else if(div == 'block5'){
+      this.block5selected = false;
     }
   }
 

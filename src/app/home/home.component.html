@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header class="masthead" [ngClass]="{'color1': block1selected, 'color2': block2selected, 'color3': block3selected, 'color4': block4selected }">
+<header class="masthead" [ngClass]="{'color1': block1selected, 'color2': block2selected, 'color3': block3selected, 'color4': block4selected, 'color5': block5selected }">
   <div class="container">
     <div class="row">
       <div class="col-lg-11 col-md-10 mx-auto clearfix">
@@ -18,7 +18,7 @@
           (mouseenter) ="mouseEnter('block2')" (mouseleave) ="mouseLeave('block2')">
               <p class="clearfix">I graduated from The Federal University of Campina Grande 
                   with a Bachelor's degree in Computer Science </p>
-              <p>I am Full Stack Developer who is always trying to balance the visual weight</p>
+              <p>I am a Full Stack Developer who is always trying to balance the visual weight</p>
               <p>I am based in Auckland, NZ <img src="assets/location.png" 
                 [ngClass]="{'shake': location, 'location':!location}"> </p>
           </div>
@@ -28,10 +28,19 @@
               <p>On a usual day, my joys are listening to good music, watching series and reading.</p>  
               <p>Btw, I've recently listened to <span [innerHTML]="lastmusic"></span><span class="small"> - {{ when | amTimeAgo}}</span></p>
               <p [innerHTML]="onrepeat"></p>
+              <hr>
+              <p [innerHTML]="series"></p>
           </div>
           <div class="floating-box color4" 
           [ngClass]="{'larger': block4selected }"
           (mouseenter) ="mouseEnter('block4')" (mouseleave) ="mouseLeave('block4')">
+              <p>Although I am not good at all you can also find myself </p>  
+              <p>playing <a class="games" target="_blank" href="http://xboxdvr.com/gamer/joopeeds/videos">Tom Clancy's Rainbow Six Siege</a> on Xbox</p>
+              <p></p>
+          </div>
+          <div class="floating-box color5" 
+          [ngClass]="{'larger': block5selected }"
+          (mouseenter) ="mouseEnter('block5')" (mouseleave) ="mouseLeave('block5')">
             <p>See my full resume and work history 
               <a class="resume" target="_blank" href="http://www.linkedin.com/in/joopeed/">on Linkedin</a> or 
               <a class="resume" target="_blank" href="http://www.joopeeds.com/resume.pdf">download it</a></p>
