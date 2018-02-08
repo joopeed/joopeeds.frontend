@@ -5,23 +5,19 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
 
   lastmusic: string = '<  <i class="fa fa-spinner fa-spin"/></i> loading >';
   onrepeat: string = '<  <i class="fa fa-spinner fa-spin"></i> loading  >'
-  series: string = '<a class="series" target="_blank" href="http://www.amc.com/shows/breaking-bad"><i class="fa fa-television"></i> Breaking Bad</a> is probably my favourite TV series of all-time. It should be yours as well <br> ' +
+  series: string = '<a class="series" target="_blank" href="http://www.amc.com/shows/breaking-bad"><i class="fa fa-television"></i> Breaking Bad</a> is probably my favourite TV series of all-time.<br> ' +
   'Along with <a class="series" target="_blank" href="https://www.netflix.com/title/70178217"><i class="fa fa-television"></i> House of Cards</a> which is completely messed up.'
-  when
-  shake = false;
-  location = false;
-  block1selected = false; 
-  block2selected = false; 
-  block3selected = false; 
-  block4selected = false;
-  block5selected = false;
+  when: string;
+  shake: boolean = false;
+  location: boolean = false;
+  blockselected = [false, false, false, false, false, false]; 
 
   constructor(private http: HttpClient) {}
 
@@ -48,36 +44,23 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  mouseEnter(div : string){
-    if(div == 'block1'){
+  mouseEnter(div : number){
+    if(div === 1){
       this.shake = true;
-      this.block1selected = true;
-    } else if(div == 'block2'){
+    } else if(div === 2) {
       this.location = true;
-      this.block2selected = true;
-    } else if(div == 'block3'){
-      this.block3selected = true;
-    } else if(div == 'block4'){
-      this.block4selected = true;
-    } else if(div == 'block5'){
-      this.block5selected = true;
     }
+    this.blockselected[div] = true;
+      
   }
 
-  mouseLeave(div : string){
-    if(div == 'block1'){
+  mouseLeave(div : number){
+    if(div === 1){
       this.shake = false;
-      this.block1selected = false;
-    } else if(div == 'block2'){
+    } else if(div === 2) {
       this.location = false;
-      this.block2selected = false;
-    } else if(div == 'block3'){
-      this.block3selected = false;
-    } else if(div == 'block4'){
-      this.block4selected = false;
-    } else if(div == 'block5'){
-      this.block5selected = false;
     }
+    this.blockselected[div] = false;
   }
 
 }

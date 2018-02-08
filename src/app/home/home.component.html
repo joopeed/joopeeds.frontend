@@ -1,21 +1,21 @@
 <!-- Page Header -->
-<header class="masthead" [ngClass]="{'color1': block1selected, 'color2': block2selected, 'color3': block3selected, 'color4': block4selected, 'color5': block5selected }">
+<header class="masthead" [ngClass]="{'color1': blockselected[1], 'color2': blockselected[2], 'color3': blockselected[3], 'color4': blockselected[4], 'color5': blockselected[5] }">
   <div class="container">
     <div class="row">
       <div class="col-lg-11 col-md-10 mx-auto clearfix">
         <div class="post-heading">
           <div class="floating-box color1" 
-          [ngClass]="{'larger': block1selected }"
-          (mouseenter) ="mouseEnter('block1')" (mouseleave) ="mouseLeave('block1')">
+          [ngClass]="{'larger': blockselected[1] }"
+          (mouseenter) ="mouseEnter(1)" (mouseleave) ="mouseLeave(1)">
               <h2 class="subheading">
                 <img src="assets/waving-hand.png" 
                 [ngClass]="{'shake': shake, 'hand':!shake}"> 
                 Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.</h2> 
               <p class="text-desc">Also known as joopeeds</p>
           </div>
-          <div class="floating-box color2 bold" 
-          [ngClass]="{'larger': block2selected }"
-          (mouseenter) ="mouseEnter('block2')" (mouseleave) ="mouseLeave('block2')">
+          <div class="floating-box color2" 
+          [ngClass]="{'larger': blockselected[2] }"
+          (mouseenter) ="mouseEnter(2)" (mouseleave) ="mouseLeave(2)">
               <p class="clearfix">I graduated from The Federal University of Campina Grande 
                   with a Bachelor's degree in Computer Science </p>
               <p>I am a Full Stack Developer who is always trying to balance the visual weight</p>
@@ -23,24 +23,25 @@
                 [ngClass]="{'shake': location, 'location':!location}"> </p>
           </div>
           <div class="floating-box color3" 
-          [ngClass]="{'larger': block3selected }"
-          (mouseenter) ="mouseEnter('block3')" (mouseleave) ="mouseLeave('block3')">
-              <p>On a usual day, my joys are listening to good music, watching series and reading.</p>  
+          [ngClass]="{'larger': blockselected[3] }"
+          (mouseenter) ="mouseEnter(3)" (mouseleave) ="mouseLeave(3)">
+              <p>Apart from that, on a usual day, my little joys are listening to good music, taking photos (sometimes), learning a new thing.</p>  
+              <p>I love to have time to read. Also, I've just started writing on medium.</p>
               <p>Btw, I've recently listened to <span [innerHTML]="lastmusic"></span><span class="small"> - {{ when | amTimeAgo}}</span></p>
               <p [innerHTML]="onrepeat"></p>
               <hr>
               <p [innerHTML]="series"></p>
           </div>
           <div class="floating-box color4" 
-          [ngClass]="{'larger': block4selected }"
-          (mouseenter) ="mouseEnter('block4')" (mouseleave) ="mouseLeave('block4')">
-              <p>Although I am not good at all you can also find myself </p>  
-              <p>playing <a class="games" target="_blank" href="http://xboxdvr.com/gamer/joopeeds/videos">Tom Clancy's Rainbow Six Siege</a> on Xbox</p>
+          [ngClass]="{'larger': blockselected[4] }"
+          (mouseenter) ="mouseEnter(4)" (mouseleave) ="mouseLeave(4)">
+              <p>Although I am not good at all you can also find myself  
+               playing <a class="games" target="_blank" href="http://xboxdvr.com/gamer/joopeeds/videos">Tom Clancy's Rainbow Six Siege</a> on Xbox</p>
               <p></p>
           </div>
           <div class="floating-box color5" 
-          [ngClass]="{'larger': block5selected }"
-          (mouseenter) ="mouseEnter('block5')" (mouseleave) ="mouseLeave('block5')">
+          [ngClass]="{'larger': blockselected[5] }"
+          (mouseenter) ="mouseEnter(5)" (mouseleave) ="mouseLeave(5)">
             <p>See my full resume and work history 
               <a class="resume" target="_blank" href="http://www.linkedin.com/in/joopeed/">on Linkedin</a> or 
               <a class="resume" target="_blank" href="http://www.joopeeds.com/resume.pdf">download it</a></p>
