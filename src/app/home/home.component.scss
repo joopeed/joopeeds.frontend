@@ -47,21 +47,21 @@ p {
 
 @keyframes slideInFromTop {
     0% {
-      transform: translateY(-800px);
+      transform: translate(-50%, -500%);
     }
     100% {
-      transform: translateY(0);
+      transform: translate(-50%, 0);;
     }
 }
 
 .floating-box {
     line-height: 0.5;
-    float: left;
+    transform: translate(-50%,0);
+    position: relative;
+    left: 50%;
     padding: 20px;
-    margin: 10px;
     width: 80%;
     background: black;  
-    margin-bottom: -10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.179);
     @include animation(0.5s ease-out 0s 1 slideInFromTop);
 }
@@ -79,8 +79,8 @@ $colors-back: #116322 #568564 rgb(63, 32, 94) #FF858A #F72464;
 }
 
 .larger {
-    transition: all 0.2s ease-in-out 0s; 
-    transform: scale(1.1);
+    transition: all 0.2s ease-in-out 0s;
+    transform: translate(-50%,0) scale(1.1);
 }
 
 a.music:link { 
