@@ -114,6 +114,7 @@ $colors-back: #116322 #568564 rgb(63, 32, 94) #FF858A #F72464;
 .larger {
     transition: all 0.2s ease-in-out 0s;
     transform: translate(-50%,0) scale(1.1);
+    z-index: 2;
 }
 
 a.music:link { 
