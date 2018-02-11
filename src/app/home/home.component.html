@@ -4,14 +4,23 @@
     <div class="row">
       <div class="col-lg-12 col-md-12">
         <div class="post-heading">
+          <div class="darthvader" [ngClass]="{'appear': blockselected[1] }"><img src="assets/darthvader.png"></div>
           <div class="floating-box color1" 
           [ngClass]="{'larger': blockselected[1] }"
           (mouseenter) ="mouseEnter(1)" (mouseleave) ="mouseLeave(1)">
-              <h2 class="subheading">
+            <div class="row">
+             <div class="col-lg-10 col-md-9 align-middle">
+               <h2 class="subheading name float-right">
                 <img src="assets/waving-hand.png" 
                 [ngClass]="{'shake': shake, 'hand':!shake}"> 
-                Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.</h2> 
+                Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.
+              </h2> 
               <p class="text-desc">Also known as joopeeds</p>
+             </div>
+             <div class="col-lg-2 col-md-3">
+                <img src="assets/joopeeds.jpg" class="me">
+              </div>
+            </div>
           </div>
           <div class="floating-box color2" 
           [ngClass]="{'larger': blockselected[2] }"
