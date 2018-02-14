@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('https://joopeedsblog.appspot.com/api/exposed/recently_played')
+    this.http.get('https://api.joopeeds.com/api/exposed/recently_played')
     .subscribe(data => {
       this.lastmusic = '<a class="music" href="' + data[0].link + '"> <i class="fa fa-spotify"></i> ' + data[0].name + ' - ' + data[0].artists + '</a>' 
       this.when = data[0].when;
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       this.lastmusic = '< <i class="fa fa-exclamation-circle"/></i>  =( >';
     });
 
-    this.http.get('https://joopeedsblog.appspot.com/api/exposed/on_repeat')
+    this.http.get('https://api.joopeeds.com/api/exposed/on_repeat')
     .subscribe(data => {
       if (data['on_repeat']) {
         this.onrepeat = 'Music on repeat this last week <a class="onrepeat" href="' + data['music'].link + '"> <i class="fa fa-heart"></i> ' + data['music'].name + ' - ' + data['music'].artists + '</a>'
