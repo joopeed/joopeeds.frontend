@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-post',
@@ -26,7 +27,7 @@ export class PostComponent implements OnInit {
    id: string;
 
    // Inject HttpClient into your component or service.
-   constructor(private http: HttpClient, private route: ActivatedRoute) {}
+   constructor(private http: HttpClient, private route: ActivatedRoute, private titleService: Title) {}
 
 
    ngOnInit() {
@@ -34,6 +35,7 @@ export class PostComponent implements OnInit {
      this.http.get('https://joopeedsblog.appspot.com/api/medium_posts/' + this.id).subscribe(data => {
           // Read the result field from the JSON response.
           this.post = data;
+          this.titleService.setTitle(this.post.title + " - Joopeeds");
         }, error => {
           this.post = {};
      });

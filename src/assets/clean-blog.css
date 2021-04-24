@@ -87,11 +87,13 @@ body {
   }
   
   #mainNav .navbar-brand {
-    font-weight: 800;
     color: #343a40;
   }
   
   #mainNav .navbar-toggler {
+    position:absolute;
+    right: 0;
+    margin-right: 20px;
     font-size: 12px;
     font-weight: 800;
     padding: 13px;
@@ -112,18 +114,19 @@ body {
       background: transparent;
     }
     #mainNav .navbar-brand {
-      padding: 10px 20px;
-      color: #fff;
+      color: rgb(174, 180, 185);
+      text-shadow: 1px 1px 1px rgb(179, 179, 179);
+
     }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255); 
     }
     #mainNav .navbar-nav > li.nav-item > a {
       padding: 10px 20px;
-      color: #fff;
+      color: rgb(136, 135, 135);
     }
     #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(141, 140, 140, 0.8);
     }
   }
   
@@ -175,7 +178,7 @@ body {
   header.masthead {
     margin-bottom: 50px;
     background: no-repeat center center;
-    background-color: #3B475E;
+    background-color: rgb(255, 255, 255);
     background-attachment: scroll;
     position: relative;
     -webkit-background-size: cover;
@@ -190,7 +193,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #fafbfd;
+    background-color: #fdc063;
     opacity: 0.5;
   }
   

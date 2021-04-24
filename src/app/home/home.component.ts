@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit {
 
   lastmusic: string = '<  <i class="fa fa-spinner fa-spin"/></i> loading >';
   onrepeat: string = '<  <i class="fa fa-spinner fa-spin"></i> loading  >'
-  series: string = '<a class="series" target="_blank" href="http://www.amc.com/shows/breaking-bad"><i class="fa fa-television"></i> Breaking Bad</a> is probably my favourite TV series of all-time.<br> ' +
-  'Along with <a class="series" target="_blank" href="https://www.netflix.com/title/70178217"><i class="fa fa-television"></i> House of Cards</a> which is completely messed up.'
+  series: string = '<a class="series" target="_blank" href="http://www.amc.com/shows/breaking-bad"><i class="fa fa-television"></i> Breaking Bad</a> is probably my favourite TV series of all-time.<br> '
   when: string;
   shake: boolean = false;
   location: boolean = false;

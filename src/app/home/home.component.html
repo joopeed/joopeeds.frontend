@@ -1,60 +1,63 @@
 <!-- Page Header -->
 <header class="masthead" [ngClass]="{'color1': blockselected[1], 'color2': blockselected[2], 'color3': blockselected[3], 'color4': blockselected[4], 'color5': blockselected[5] }">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12">
+  <div class="container" >
+    <div class="row" >
+      <div class="col-lg-12 col-md-12" >
         <div class="post-heading">
-          <div class="darthvader" [ngClass]="{'appear': blockselected[1] }"><img src="assets/darthvader.png"></div>
-          <div class="floating-box color1" 
-          [ngClass]="{'larger': blockselected[1] }"
-          (mouseenter) ="mouseEnter(1)" (mouseleave) ="mouseLeave(1)">
-            <div class="row">
-             <div class="col-lg-10 col-md-9 align-middle">
-               <h2 class="subheading name float-right">
-                <img src="assets/waving-hand.png" 
-                [ngClass]="{'shake': shake, 'hand':!shake}"> 
-                Hi, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.
-              </h2> 
-              <p class="text-desc">Also known as joopeeds</p>
-             </div>
-             <div class="col-lg-2 col-md-3">
-                <img src="assets/joopeeds.jpg" class="me">
+          <div class="blocks">
+            <div class="darthvader" [ngClass]="{'appear': blockselected[1] }"><img src="assets/darthvader.png"></div>
+            <div class="floating-box color1" 
+            [ngClass]="{'larger': blockselected[1] }"
+            (mouseenter) ="mouseEnter(1)" (mouseleave) ="mouseLeave(1)">
+              <div class="row">
+              <div class="col-lg-10 col-md-9 align-middle">
+                <h2 class="subheading name float-right">
+                  <img src="assets/waving-hand.png" 
+                  [ngClass]="{'shake': shake, 'hand':!shake}"> 
+                  Ol&aacute;, I am <b>Jo&atilde;o Pedro Le&ocirc;ncio</b>.
+                </h2> 
+                <p class="text-desc">Also known as joopeeds</p>
+              </div>
+              <div class="col-lg-2 col-md-3">
+                  <img src="assets/joopeeds3.jpg" class="me">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="floating-box color2" 
-          [ngClass]="{'larger': blockselected[2] }"
-          (mouseenter) ="mouseEnter(2)" (mouseleave) ="mouseLeave(2)">
-              <p class="clearfix">I graduated from The Federal University of Campina Grande 
-                  with a Bachelor's degree in Computer Science </p>
-              <p>I am a Full Stack Developer who is always trying to balance the visual weight</p>
-              <p>I am based in Auckland, NZ <img src="assets/location.png" 
-                [ngClass]="{'shake': location, 'location':!location}"> </p>
-          </div>
-          <div class="floating-box color3" 
-          [ngClass]="{'larger': blockselected[3] }"
-          (mouseenter) ="mouseEnter(3)" (mouseleave) ="mouseLeave(3)">
-              <p>Apart from that, on a usual day, my little joys are listening to good music, taking photos (sometimes), learning something new.</p>  
-              <p>I love to have time to read. Also, I've just started writing on medium.</p>
-              <p>Btw, I've recently listened to <span [innerHTML]="lastmusic"></span><span class="small"> - {{ when | amTimeAgo}}</span></p>
-              <p [innerHTML]="onrepeat"></p>
-              <hr>
-              <p [innerHTML]="series"></p>
-          </div>
-          <div class="floating-box color4" 
-          [ngClass]="{'larger': blockselected[4] }"
-          (mouseenter) ="mouseEnter(4)" (mouseleave) ="mouseLeave(4)">
-              <p>Although I am not good at all you can also find myself  
-               playing <a class="games" target="_blank" href="http://xboxdvr.com/gamer/joopeeds/videos">Tom Clancy's Rainbow Six Siege</a> on Xbox</p>
-              <p></p>
-          </div>
-          <div class="floating-box color5" 
-          [ngClass]="{'larger': blockselected[5] }"
-          (mouseenter) ="mouseEnter(5)" (mouseleave) ="mouseLeave(5)">
-            <p>See my full resume and work history 
-              <a class="resume" target="_blank" href="http://www.linkedin.com/in/joopeed/">on Linkedin</a> or 
-              <a class="resume" target="_blank" href="http://www.joopeeds.com/resume.pdf">download it</a></p>
-            <p>To get in touch, write to <a class="resume" href="mailto:hi@joopeeds.co">hi@joopeeds.co</a></p>
+            <div class="floating-box color2" 
+            [ngClass]="{'larger': blockselected[2] }"
+            (mouseenter) ="mouseEnter(2)" (mouseleave) ="mouseLeave(2)">
+              <div class="row">
+                  
+                <div class="col-lg-10 col-md-9 align-right">
+                  <p >I'm a software engineer, graduated from The Federal University of Campina Grande 
+                    with a Bachelor's degree in Computer Science in 2017. 
+                <p>I work on the <a class="publons-link" href="https://publons.com">Publons</a> development team at <a class="publons-link" href="https://clarivate.com">Clarivate</a></p>
+                <p>I am based in Wellington, NZ <img src="assets/location.png" 
+                  [ngClass]="{'shake': location, 'location':!location}"> </p>
+                </div>
+                <div class="col-lg-2 col-md-3 publons-logo">
+                  <a href="https://publons.com">
+                    <img src="https://static1.squarespace.com/static/576fcda2e4fcb5ab5152b4d8/58404af86a496371af54f1b2/58404b795016e1380c9695ef/1480608634303/blue_white_shadow.png?format=100w" href="http://publons.com" class="publons">
+                  </a>
+                </div>
+                </div>
+                
+            </div>
+            <div class="floating-box color3" 
+            [ngClass]="{'larger': blockselected[3] }"
+            (mouseenter) ="mouseEnter(3)" (mouseleave) ="mouseLeave(3)">
+                <p>Using Spotify API, I cold expose a little about my week and always up-to-date:</p>
+                <p>I've recently listened to <span [innerHTML]="lastmusic"></span><span class="small"> - {{ when | amTimeAgo}}</span></p>
+                <p [innerHTML]="onrepeat"></p>
+            </div>
+            <div class="floating-box color5" 
+            [ngClass]="{'larger': blockselected[5] }"
+            (mouseenter) ="mouseEnter(5)" (mouseleave) ="mouseLeave(5)">
+              <p>See my full resume and work history 
+                <a class="resume" target="_blank" href="http://www.linkedin.com/in/joopeed/">on Linkedin</a> or 
+                <a class="resume" target="_blank" href="http://cv.joopeeds.com">download it.</a></p>
+              <p>Feel free to get in touch, write to <a class="resume" href="mailto:joao.pedro@clarivate.com">joao.pedro@clarivate.com</a></p>
+            </div>
           </div>
         </div>
       </div>

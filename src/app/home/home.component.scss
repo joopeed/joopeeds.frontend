@@ -1,5 +1,4 @@
 .text-desc {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:  12px;
     position: relative;
     float: right;
@@ -7,31 +6,56 @@
     right: 80px;
 }
 
+.name {
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2)
+}
+
 .me {
     position: static;
     background-color: #b1afaf;
+    padding:7px;
+    border-radius: 50%;
+    width: 100%;
+    box-shadow: 1px 1px 0 #ccc,
+               1px 2px 0 #c9c9c9,
+               1px 3px 0 #bbb,
+               1px 6px 1px rgba(0,0,0,.1),
+               1px 0 5px rgba(0,0,0,.1),
+               1px 1px 3px rgba(0,0,0,.3),
+               1px 3px 5px rgba(0,0,0,.2)
+}
+
+.publons {
+    background-color: #336799;
     padding:8px;
     border-radius: 50%;
     width: 100%;
-    box-shadow: 0 4px 4px 0 rgba(19, 8, 8, 0.1), 0 6px 10px 0 rgba(24, 6, 6, 0.179);
+    box-shadow: 0 6px 6px 0 rgba(19, 8, 8, 0.1), 0 10px 10px 0 rgba(24, 6, 6, 0.179);
 }
 
 .darthvader img{
-    transform: translateX(150px);
+    transform: translate(50px, 50px);
     position: absolute;
-    width: 150px;
+    width: 100px;
     z-index: 0;
     
 }
 
 .appear {
-    transform: translateX(-200px); 
-    transition: all 1s ease-in-out 2s; 
+    transform: translateX(-130px); 
+    transition: all 0.5s ease-in-out 0.5s; 
 }
 
 img.hand {
     width: 30px;
-    transition: all 0.1s ease-in-out 0s; 
+    transition: all 0.1s ease-in-out 0s;
+    margin: 5px; 
 }
 
 img.shake {
@@ -39,6 +63,8 @@ img.shake {
     cursor: default;
     transform: rotate(90deg);
     transition: all 0.1s ease-in-out 0s; 
+    margin: 5px;
+    
 }
 
 img.location {
@@ -46,10 +72,16 @@ img.location {
     transition: all 0.1s ease-in-out 0s; 
 }
 
+.publons-logo {
+    padding-bottom: 30px;
+}
+
 p {
     line-height: 1.3;
     clear: both;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', serif;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    font-size: 18px;
 }
 
 @mixin transition($transition...) {
@@ -69,53 +101,140 @@ p {
 
 @keyframes slideInFromTop {
     0% {
-      transform: translate(-50%, -500%);
+      transform: translate(0, -500%);
     }
     100% {
-      transform: translate(-50%, 0);;
+      transform: translate(0, 0);;
     }
 }
+.blocks {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap:0px;
+}
+
+@media only screen and (max-width: 700px) {
+	.blocks {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
 
 .floating-box {
     z-index: 1;
     line-height: 0.5;
-    transform: translate(-50%,0);
-    position: relative;
-    left: 50%;
-    padding: 20px;
-    width: 80%;
+    //transform: translate(-50%,0);
+    //position: relative;
+    //left: 50%;
+    padding: 30px;
+    
+    margin: 20px;
     background: black;  
+    border-radius: 20px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.179);
     @include animation(0.5s ease-out 0s 1 slideInFromTop);
 }
 
+@media only screen and (min-width: 700px) {
+	.floating-box {
+        margin-right: 30%;
+    }
+    .me, .publons {
+        width:200%;
+    }
+}
 
-$colors-font: #c3e4c9 #d2e7d9 rgb(149, 93, 167) rgb(255, 190, 190) rgb(255, 198, 214);
-$colors-back: #116322 #568564 rgb(63, 32, 94) #FF858A #F72464;
+$colors-font: #ffffff #ffffff rgb(250, 250, 250) rgb(255, 255, 255) rgb(255, 198, 214);
+$colors-back: linear-gradient(200deg, #BA5EC2,#F662A8, #FF7A87, #FFA16B, #FFCD5E, #F9F871) 
+            linear-gradient(140deg, #123161, #1b6486, #3d92b4, #479dc5, #79d4d4 )
+            linear-gradient(140deg, #173869, #004e71, #005e60, #256a44, #676f32 ) 
+            linear-gradient(90deg, #112a4f, #003953,  #004445)
+            linear-gradient(90deg, #004445, #1b4b30, #484e24) ;
 
 @each $current in $colors-back {
     $i: index($colors-back, $current);
     .color#{$i} {
         color: nth($colors-font, $i);
         @include transition(all 1.3s ease-in-out 0s);
-        background-color: $current;
+        background: $current;
     }
     @if $i == 1 {
+        .color#{$i} {
+            grid-column: 1/3;
+            //grid-column-start: 1;
+            //grid-column-end: 3;
+            
+        }
+        @media only screen and (max-width: 700px) {
+            .color#{$i} {
+                grid-column: 1/2;
+            } 
+        }
         //darkside
         .color#{$i}:hover {
             color: white;
-            background-color: black;
+            //background: black;
             transition: color 1s ease-in-out 2s; 
-            transition: background-color 1s ease-in-out 2s;
+        }
+    }
+    @if $i == 2 {
+        .color#{$i} {
+            grid-column: 1/3;
+            //grid-column-start: 1;
+            //grid-column-end: 3;
+            
+        }
+        @media only screen and (max-width: 700px) {
+            .color#{$i} {
+                grid-column: 1/2;
+            } 
+        }
+    }
+    @if $i == 3 {
+        .color#{$i} {
+            grid-column: 1/3;
+            //grid-column-start: 1;
+            //grid-column-end: 3;
+            
+        }
+        @media only screen and (max-width: 700px) {
+            .color#{$i} {
+                grid-column: 1/2;
+            } 
+        }
+    }
+    @if $i == 4 {
+        .color#{$i} {
+            grid-column: 1/3;
+            //grid-column-start: 1;
+            //grid-column-end: 3;
+            
+        }
+        @media only screen and (max-width: 700px) {
+            .color#{$i} {
+                grid-column: 1/2;
+            } 
         }
     }
 }
 
 .larger {
     transition: all 0.2s ease-in-out 0s;
-    transform: translate(-50%,0) scale(1.1);
+    transform: scale(1.1);
     z-index: 2;
 }
+
+a.publons-link:link { 
+    transition: all 1.3s ease-in-out 0s; 
+    color:rgb(181, 212, 241); text-decoration:none; font-weight:normal; 
+}
+a.publons-link:visited { color: rgb(181, 212, 241);text-decoration:none; font-weight:normal; }
+a.publons-link:hover { 
+    transition: all 1.3s ease-in-out 0s; 
+    color: #336799; text-decoration:none; font-weight:normal; 
+}
+a.publons-link:active { color: rgb(181, 212, 241); text-decoration:none; font-weight:normal; }
 
 a.music:link { 
     transition: all 1.3s ease-in-out 0s; 
@@ -127,7 +246,6 @@ a.music:hover {
     color: rgb(0, 248, 21); text-decoration:none; font-weight:normal; 
 }
 a.music:active { color: rgb(50, 161, 59); text-decoration:none; font-weight:normal; }
-
 
 a.onrepeat:link { 
     transition: all 1.3s ease-in-out 0s; 

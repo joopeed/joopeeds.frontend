@@ -2,3 +2,56 @@ a:link {color:#202a2f;}
 a:visited {color:#202a2f;}
 a:hover {color:#257ba7;}
 
+.logo {
+    transform: scale(0.8)
+}
+.logo-j {
+    transform: translateX(10px);
+    transition: all 0.1s ease-in-out 0.5s;
+}
+
+.logo-oo {
+    transition: all 0.1s ease-in-out 0.5s;
+    transform: scale(0, 0) translateX(-85px);
+}
+
+.logo-eeds {
+    transition: all 0.1s ease-in-out 0.5s;
+    transform: scale(1,0) translateX(-160px);
+}
+
+.logo-p {
+    transform: scale(-1, -1) translateX(80px);
+    transition: all 0.1s ease-in-out 0.5s;
+}
+
+.logo-oo-complete {
+    transition: all 0.1s ease-in-out 1s;
+    transform: scale(0.8, 0.8) translateX(-85px);
+}
+
+.logo-j-complete {
+    transform: translateX(-45px);
+    transition: all 0.1s ease-in-out 1s; 
+}
+
+.logo-p-complete {
+    transform: scale(-1, -1) translateX(92px);
+    transition: all 0.1s ease-in-out 1s; 
+}
+
+.logo-eeds-complete {
+    transition: all 0.1s ease-in-out 1s;
+    transform: scale(0.8, 0.8) translate(-160px, 2px);
+}
+
+.ribbon-top {
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+    top: 0;
+    height: 13px;
+    margin-bottom: 50px;
+    z-index: 5;
+    background: linear-gradient(90deg, #cf1033 0%, #fa1c45 12.5%, #e4662c 12.5%, #ec8b30 25%, #ef9f48 25%, #ef9f48 37.5%, #9cb641 37.5%, #9cb641 50%, #009484 50%, #009484 62.5%, #21acb8 62.5%, #21acb8 75%, #1972dd 75%, #1972dd 87.5%, #8fa0ae 87.5%, #8fa0ae 100%);
+    }

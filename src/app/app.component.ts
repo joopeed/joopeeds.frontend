@@ -10,6 +10,7 @@ import {
 } from '@angular/animations';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -35,6 +36,8 @@ import {
 })
 export class AppComponent {
 
+  logoComplete:boolean;
+
   constructor(private renderer: Renderer){}
 
   // change the animation state
@@ -50,5 +53,14 @@ export class AppComponent {
     this.renderer.setElementProperty(document.body, "scrollTop", 0);
   }
 
+
+
+  mouseEnter(){
+    this.logoComplete = true;
+  }
+
+  mouseLeave(){
+    this.logoComplete = false;
+  }
 
 }
